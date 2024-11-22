@@ -1,63 +1,83 @@
 # Image Resaver
 
-A lightweight PyQt5 app for resaving and optimizing images with drag-and-drop functionality. Supports JPG, JPEG, and PNG formats, optimizing images in batches of up to 50 files with a clean dark-themed interface.
+Легковесное приложение на PyQt5 для пересохранения и оптимизации изображений с поддержкой перетаскивания файлов. Поддерживает форматы JPG, JPEG и PNG, оптимизируя изображения в пакетах до 50 файлов с использованием удобного интерфейса в тёмной теме.
 
-## Features
+Я создал это приложение для удобного пересохранения изображений из редактора Тильда. Очень часто Тильда сохраняет свои изображения в WEBP-контейнере, из-за чего их потом нельзя загрузить обратно в Тильду напрямую, без пересохранения.
 
-- Drag and drop images directly into the window.
-- Automatically optimizes and resaves images with high quality.
-- Supports up to **50 images** per batch.
-- Dark-themed interface for a comfortable user experience.
-- Checks for the presence of the `Roboto` font and defaults to `Arial` if unavailable.
+## Особенности
 
-## Requirements
+- Поддержка перетаскивания изображений прямо в окно приложения.
+- Автоматическая оптимизация и пересохранение изображений с высоким качеством.
+- Поддержка пакетной обработки до **50 изображений** за один раз.
+- Удобный интерфейс в тёмной теме.
+- Проверка наличия шрифта `Roboto`, с использованием шрифта `Arial` по умолчанию, если первый недоступен.
 
-- Python 3.8 or later
-- The following Python libraries:
+## Требования
+
+- Python версии 3.8 или выше.
+- Следующие библиотеки Python:
   - [PyQt5](https://pypi.org/project/PyQt5/)
   - [Pillow](https://pypi.org/project/Pillow/)
 
-## Installation
+## Установка
 
-1. Clone the repository:
+1. Клонируйте репозиторий:
 
    ```bash
    git clone https://github.com/baslie/image-resaver.git
    cd image-resaver
    ```
 
-2. Install the required dependencies manually:
+2. Установите необходимые зависимости вручную:
 
    ```bash
    pip install PyQt5 Pillow
    ```
 
-3. Place an icon file named `app_icon.ico` in the project directory (optional).
+3. Поместите файл иконки с именем `app_icon.ico` в директорию проекта (опционально).
 
-## Usage
+## Использование
 
-1. Run the application:
+1. Запустите приложение:
 
    ```bash
    python image_resaver.py
    ```
 
-2. Drag and drop your images (`JPG`, `JPEG`, or `PNG`) into the application window.
+2. Перетащите ваши изображения (`JPG`, `JPEG` или `PNG`) в окно приложения.
 
-3. The application will automatically optimize and resave your images in their original location.
+3. Программа автоматически оптимизирует и пересохранит ваши изображения в их исходной папке.
 
-## Notes
+## Примечания
 
-- The application supports up to 50 images in a single operation. Additional images will be ignored without a warning.
-- Unsupported file formats are ignored without any messages.
+- Приложение поддерживает обработку до 50 изображений за один раз. Дополнительные файлы будут проигнорированы без предупреждения.
+- Неподдерживаемые форматы файлов игнорируются без вывода сообщений.
 
-## License
+## Компиляция в exe-файл на Windows
 
-This project is licensed under the MIT License.
+Для создания исполняемого файла (exe) используйте `PyInstaller`:
 
-## Contribution
+1. Установите PyInstaller:
 
-Feel free to open issues or submit pull requests to improve the application!
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. Выполните следующую команду для создания exe-файла:
+
+   ```bash
+   pyinstaller --onefile --windowed --icon=app_icon.ico image_resaver.py
+   ```
+
+3. Исполняемый файл будет находиться в папке `dist`.
+
+## Лицензия
+
+Этот проект лицензирован под лицензией MIT.
+
+## Вклад в проект
+
+Вы можете открывать задачи или отправлять pull-запросы для улучшения приложения!
 
 ---
-Happy coding!
+Приятной работы!
