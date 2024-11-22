@@ -22,17 +22,11 @@ A lightweight PyQt5 app for resaving and optimizing images with drag-and-drop fu
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/image-resaver.git
+   git clone https://github.com/baslie/image-resaver.git
    cd image-resaver
    ```
 
-2. Install the required dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-   Alternatively, install dependencies manually:
+2. Install the required dependencies manually:
 
    ```bash
    pip install PyQt5 Pillow
